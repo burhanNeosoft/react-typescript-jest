@@ -1,9 +1,12 @@
+// App.test.tsx
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it('renders header and Counter', () => {
+    render(<App />);
+    expect(screen.getByText('Welcome')).toBeInTheDocument();
+    expect(screen.getByText('Count: 2')).toBeInTheDocument();
+  });
 });
