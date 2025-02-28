@@ -1,12 +1,11 @@
-/* // CounterSnapshot.test.tsx
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Counter from './Counter';
 
-it('matches the snapshot', () => {
-  const tree = renderer.create(<Counter initialCount={5} />).toJSON();
-  expect(tree).toMatchSnapshot();
+describe('Counter', () => {
+  it('matches snapshot', () => {
+    const { container } = render(<Counter initialCount={5} />);
+    expect(container).toMatchSnapshot();
+  });
 });
- */
-
-export {}

@@ -34,13 +34,6 @@ Validates that the rendered output of a component does not change unexpectedly.
 npm test CounterSnapshot.test.tsx
 ```
 
-### 4. Accessibility Testing
-Ensures the component meets accessibility standards (e.g., proper ARIA roles).
-
-**Test Command:**
-```bash
-npm test CounterAccessibility.test.tsx
-```
 
 ### 5. Behavior Testing
 Simulates real user interactions and ensures the component behaves as expected.
